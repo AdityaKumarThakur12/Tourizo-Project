@@ -1,0 +1,184 @@
+.contact {
+    background-color: #1a202c;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .left-contact {
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 90px;
+  }
+  
+  .left-contact > h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1a202c;
+    font-weight: 500;
+    text-align: center;
+  }
+  
+  .left-contact > form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .left-contact > form > label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #303132;
+  }
+  
+  .left-contact > form input,
+  .left-contact > form textarea {
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    outline: none;
+  }
+  
+  .left-contact > form input:focus,
+  .left-contact > form textarea:focus {
+    border-color: #319795;
+    box-shadow: 0 0 0 2px rgba(49, 151, 149, 0.3);
+  }
+  
+  .left-contact > form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .left-contact > form .chakra-button {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #319795;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .left-contact > form .chakra-button:hover {
+    background-color: #2c7a7b;
+  }
+  
+  .company-address {
+    width: 90%;
+    max-width: 400px;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .company-address > h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  .company-address > p {
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+  
+  .company-address > a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .company-address > a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+      height: auto; /* Allow the height to adjust naturally for smaller screens */
+      padding: 20px;
+    }
+  
+    .left-contact {
+      padding: 20px;
+      margin-top: 130px;
+      max-width: 100%; /* Use full width on smaller screens */
+    }
+  
+    .left-contact > h1 {
+      font-size: 1.8rem;
+    }
+  
+    .left-contact > form input,
+    .left-contact > form textarea {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .company-address {
+      padding: 15px;
+      max-width: 100%;
+      margin-top: 80px;
+    }
+  
+    .company-address > h2 {
+      font-size: 1.8rem;
+    }
+  
+    .company-address > p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact {
+        flex-direction: column;
+        height: auto; /* Allow the height to adjust naturally for smaller screens */
+        padding: 20px;
+        height: 100%;
+      }
+      .left-contact{
+        margin-top: 140px;
+      }
+    .left-contact > h1 {
+      font-size: 1.5rem;
+    }
+  
+    .left-contact > form {
+      gap: 8px;
+    }
+  
+    .left-contact > form input,
+    .left-contact > form textarea {
+      font-size: 1rem;
+      padding: 6px;
+    }
+  
+    .company-address {
+      padding: 10px;
+      margin-top: 100px;
+      margin-bottom: 70px;
+    }
+  
+    .company-address > h2 {
+      font-size: 1.5rem;
+    }
+  
+    .company-address > p {
+      font-size: 1rem;
+    }
+  }
+  

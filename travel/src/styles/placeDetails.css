@@ -1,0 +1,242 @@
+.place-details {
+    padding: 20px;
+    padding-top: 100px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #cdcbcb;
+    background-color: #002147;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.details-container {
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+.details-left {
+    flex: 1;
+    max-width: 50%;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.8s ease-out 1s forwards;
+}
+
+.place-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.place-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.place-description {
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+}
+
+.details-right {
+    flex: 1;
+    max-width: 50%;
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.8s ease-out 1s forwards;
+}
+
+.details-right h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    font-weight: 600;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.details-right p {
+    margin: 5px 0;
+}
+
+.place-section {
+    margin-bottom: 20px;
+}
+
+.place-section h2 {
+    font-size: 1.5rem;
+    color: #ebebeb;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #959ba1;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.place-section h2:hover {
+    color: #28a745;
+}
+
+.place-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1.1rem;
+}
+
+.place-section ul li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.place-section ul li:hover {
+    transform: translateX(10px);
+}
+
+.book-trip-button {
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-trip-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+    .details-container {
+        gap: 20px;
+    }
+
+    .details-left, .details-right {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .details-right h1 {
+        font-size: 2rem;
+    }
+
+    .place-description {
+        font-size: 1.1rem;
+    }
+
+    .place-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .place-section ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .details-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .details-left, .details-right {
+        max-width: 100%;
+    }
+
+    .place-description {
+        font-size: 1rem;
+    }
+
+    .details-right h1 {
+        font-size: 1.8rem;
+    }
+
+    .place-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .place-section ul {
+        font-size: 1rem;
+    }
+
+    .book-trip-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .place-details {
+        padding: 15px;
+        padding-top: 80px;
+    }
+
+    .details-container {
+        gap: 10px;
+    }
+
+    .place-description {
+        font-size: 0.9rem;
+    }
+
+    .details-right h1 {
+        font-size: 1.5rem;
+    }
+
+    .place-section h2 {
+        font-size: 1rem;
+    }
+
+    .place-section ul li {
+        font-size: 0.9rem;
+    }
+
+    .book-trip-button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+}

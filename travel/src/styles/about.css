@@ -1,0 +1,228 @@
+/* General Styling */
+.about-us {
+    width: 100%;
+    background-color: #0f1c2b;
+    padding: 90px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #cdcbcb;
+    animation: fadeIn 1.5s ease-out;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Background Images */
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 300%;
+    height: 300%;
+    background-image: url('/path/to/your/image.jpg'); /* Use a floating image */
+    background-position: center;
+    background-size: cover;
+    animation: floatBackground 30s ease-in-out infinite;
+    z-index: -1;
+}
+
+/* Animation for Background Floating */
+@keyframes floatBackground {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-10px) translateX(15px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Card-like Structure for Content */
+.about-us .about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    opacity: 0;
+    animation: slideIn 1.5s ease-out forwards;
+    background-color: #1d2a38;  /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Header Style */
+.about-us h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 0.5s forwards;
+}
+
+/* Highlight text style */
+.about-us .highlight {
+    color: #28a745;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Paragraph Style */
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin: 20px auto;
+    max-width: 800px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 1s forwards;
+}
+
+/* Section Styles */
+.about-us section {
+    margin: 60px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 1.5s forwards;
+    background-color: #2a3c4f;  /* Light card background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for sections */
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 2s forwards;
+}
+
+/* List Style */
+.about-us ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.about-us ul li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.about-us ul li::before {
+    content: '✔';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Button Style */
+.about-us button {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #28a745;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out 3s forwards;
+}
+
+.about-us button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-us h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-us p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .about-us h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-us button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .about-us section {
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-us p {
+        font-size: 0.95rem;
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-us ul li {
+        font-size: 1rem;
+    }
+
+    .about-us button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

@@ -1,0 +1,218 @@
+.bookings-content{
+    padding-top: 70px;
+    height: 100vh;
+    width: 100%;
+    background-color: #1a202c;
+}
+.booking-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+    overflow: hidden;
+  }
+  
+  /* Header Animation */
+  .booking-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #0f1c2b;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+  }
+  
+  /* Form Styling */
+  .booking-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Label Styling */
+  .booking-page label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: -10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1s forwards;
+  }
+  
+  /* Input Styling */
+  .booking-page input {
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 1.5s forwards;
+  }
+  
+  .booking-page input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Button Styling */
+  .booking-page button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 2s forwards;
+  }
+  
+  .booking-page button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* Success Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 2.5s forwards;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    animation: modalScaleUp 0.1s ease-out forwards;
+  }
+  
+  .modal-content button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #218838;
+  }
+
+  /* .payment-mode {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    overflow-y: visible;
+    flex-wrap: nowrap;  
+  }
+  
+  .payment-mode label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .payment-mode input {
+    width: 18px;
+    height: 20px;
+  } */
+  
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes modalScaleUp {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .booking-page {
+      padding: 20px;
+    }
+  
+    .booking-page h1 {
+      font-size: 1.8rem;
+    }
+  
+    .booking-page button {
+      font-size: 1rem;
+      padding: 10px 15px;
+    }
+  
+    .booking-page input {
+      font-size: 1rem;
+    }
+  
+    .modal-content {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .booking-page {
+      padding: 15px;
+    }
+  
+    .booking-page h1 {
+      font-size: 1.6rem;
+    }
+  
+    .booking-page button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+  
+    .booking-page input {
+      font-size: 0.9rem;
+    }
+  
+    .modal-content {
+      width: 90%;
+    }
+  }
+  
