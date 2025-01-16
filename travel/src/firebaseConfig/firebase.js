@@ -3,13 +3,13 @@ import { getDatabase } from "firebase/database";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAUhTX6-deI0mNjmSmmt2QDOEYo9ElsuB0",
-  authDomain: "tourizo-22c90.firebaseapp.com",
-  databaseURL: "https://tourizo-22c90-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "tourizo-22c90",
-  storageBucket: "tourizo-22c90.firebasestorage.app",
-  messagingSenderId: "440059443547",
-  appId: "1:440059443547:web:cbd72663ea7f576e19c27e"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL:import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId:import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
