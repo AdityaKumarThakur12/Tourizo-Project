@@ -1,12 +1,12 @@
-Solo Travel Website 🌍
+# Solo Travel Website 🌍
 
 A comprehensive and engaging solo travel platform designed to empower solo travelers with tools, recommendations, and resources to make their journeys unforgettable. Built with React and Firebase, this application provides a seamless and personalized user experience.
 
-Website Deployment 🌐
+# Website Deployment 🌐
 
 The website is live at: https://travelzo.netlify.app/
 
-Table of Contents 🗄
+# Table of Contents 🗄
 
 Features
 
@@ -30,7 +30,7 @@ License
 
 Contact
 
-Features ✨
+# Features ✨
 
 Dynamic Content: A homepage featuring curated blogs, tips, and travel inspiration for solo travelers.
 
@@ -64,7 +64,7 @@ npm (package manager)
 
 Git & GitHub (version control)
 
-Installation 🚀
+# Installation 🚀
 
 Follow these steps to set up and run the project locally:
 
@@ -108,7 +108,7 @@ npm run dev
 
 Open http://localhost:5173 in your browser to view the app.
 
-Usage 🔥
+# Usage 🔥
 
 Explore Travel Content:
 
@@ -123,7 +123,7 @@ Personalized Dashboard:
 Access your saved preferences and recommendations tailored to you.
 
 Folder Structure 📁
-
+```plaintext
 travel/
 ├── public/
 │   ├── _redirects
