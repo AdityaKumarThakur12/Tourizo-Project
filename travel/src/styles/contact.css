@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+    overflow: hidden;
   }
   
   .left-contact {
@@ -15,6 +16,7 @@
     max-width: 600px;
     width: 100%;
     margin-top: 90px;
+    overflow: hidden;
   }
   
   .left-contact > h1 {

@@ -160,6 +160,7 @@
     margin-bottom: -50px;
     color: white;
     animation: float 3s ease-in-out infinite;
+    overflow: hidden;
   }
   .content2-h1>span{
     color: red;
